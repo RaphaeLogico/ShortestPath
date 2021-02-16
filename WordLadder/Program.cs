@@ -34,6 +34,8 @@ namespace WordLadder.App
                 Console.WriteLine("Both words need to have same lenght.");                
             }
 
+            
+
 
             
         }

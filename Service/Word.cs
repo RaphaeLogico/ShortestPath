@@ -13,33 +13,22 @@ namespace WordLadder.Service
             Text = value;
         }
 
-        public bool IsValidWord()
+        public bool IsValid()
         {
             return Text.All(Char.IsLetter);
         }
 
-        public bool IsValidLength(int length)
-        {
-            return Text.Length == length;
-        }
-
-        public bool HasSameLength(IWord secondWord)
-        {
-            return Text.Length == secondWord.Text.Length;
-        }
-
-        public bool IsNotNullOrEmptyOrWhiteSpace()
-        {
-            return !string.IsNullOrWhiteSpace(Text) &&
-                Text != string.Empty;
-        }
-
-        public bool IsOnWordsList(IEnumerable<IWord> wordsList)
+        public bool IsOnList(IEnumerable<IWord> wordsList)
         {
             return wordsList.Any(x => x.Text.ToLower().Equals(this.Text.ToLower()));
         }
 
-        public bool IsOneLetterDifferent(IWord first, IWord second)
+        public bool HasSameLength(Word word)
+        {
+            return this.Text.Length == word.Text.Length;
+        }
+
+        public bool IsSimilar(IWord first, IWord second)
         {
             int differences = 0;
             if (first.Text.Length == second.Text.Length)
@@ -51,6 +40,7 @@ namespace WordLadder.Service
                         differences++;
                     }
                 }
+
             }
 
             return differences == 1;
