@@ -1,0 +1,9 @@
+C:\Users\C99997242\Source\Repos\WordLadder\Service\bin\Debug\netcoreapp3.1\WordLadder.Service.deps.json
+C:\Users\C99997242\Source\Repos\WordLadder\Service\bin\Debug\netcoreapp3.1\WordLadder.Service.dll
+C:\Users\C99997242\Source\Repos\WordLadder\Service\bin\Debug\netcoreapp3.1\WordLadder.Service.pdb
+C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.AssemblyInfoInputs.cache
+C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.AssemblyInfo.cs
+C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.csproj.CoreCompileInputs.cache
+C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.dll
+C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.pdb
+C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.csprojAssemblyReference.cache
