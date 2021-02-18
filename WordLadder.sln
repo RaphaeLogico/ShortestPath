@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordLadder.Data", "WordLadd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLadder.DI", "WordLadder.DI\WordLadder.DI.csproj", "{863C93F6-BE79-4971-971E-62CEA0EFEA3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLadder.Tests", "WordLadder.Tests\WordLadder.Tests.csproj", "{F3570E66-585E-4679-8DD8-3E3F62B5F938}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{863C93F6-BE79-4971-971E-62CEA0EFEA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{863C93F6-BE79-4971-971E-62CEA0EFEA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{863C93F6-BE79-4971-971E-62CEA0EFEA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3570E66-585E-4679-8DD8-3E3F62B5F938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3570E66-585E-4679-8DD8-3E3F62B5F938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3570E66-585E-4679-8DD8-3E3F62B5F938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3570E66-585E-4679-8DD8-3E3F62B5F938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
