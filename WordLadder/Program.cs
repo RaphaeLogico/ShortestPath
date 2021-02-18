@@ -11,11 +11,8 @@ namespace WordLadder.App
 {
     public class Program
     {
-        //public string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");
-
         public static IFileHandler fileHandler;
-        public static IWordEngine<IWord> wordEngine;
-
+        public static IWordEngine<IWord> wordEngine;        
         public static List<Word> originalWords;
 
         static void Main(string[] args)
@@ -28,49 +25,43 @@ namespace WordLadder.App
 
                 Word startWord;
                 Word targetWord;
-                int wordsLength;
-                
+                int wordsLength = Convert.ToInt32(ConfigurationManager.AppSettings.Get("WordsLenght"));
+                string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");
+                string resultfile;
 
                 Console.WriteLine(string.Format("Enter start word: "));
-                startWord = new Word(Console.ReadLine());
-                Console.WriteLine(Environment.NewLine);
+                startWord = new Word(Console.ReadLine());               
 
                 Console.WriteLine(string.Format("Enter target Word: "));
                 targetWord = new Word(Console.ReadLine());
                 Console.WriteLine(Environment.NewLine);
 
-                if (!startWord.HasSameLength(targetWord))
-                {
+                if (!startWord.HasSameLength(targetWord))                
                     Console.WriteLine("Both words need to have same lenght.");
-                }
-
+                
                 if (!startWord.IsValid() && !targetWord.IsValid())
                     throw new Exception("One words is invalid.");
 
-                if (!startWord.HasSameLength(targetWord))
-                    throw new Exception("Both words need to have same lenght");
-                else
-                    wordsLength = startWord.Value.Length;
+                if (startWord.Value.Length != wordsLength || targetWord.Value.Length != wordsLength)
+                    throw new Exception($"Both words need to have {wordsLength} of length");
 
+                resultfile = startWord.Value + targetWord.Value + ".txt";
 
                 originalWords = fileHandler.LoadDictionaryContent(wordsLength).ToList()
                 .Select(x => new Word(x.ToLower())).ToList();
 
+                Console.WriteLine($"Word dictionary: {filePath} Loaded");
 
                 WordEngine engine = new WordEngine();
                 IEnumerable<IWord> sPath = engine.FindPath(startWord, targetWord, originalWords);
 
-                //result.ForEach(x => Console.WriteLine(x.Text));
-
-                foreach (var item in sPath)
-                {
-                    Console.WriteLine(item.Value);
-                }
+                sPath.ToList().ForEach(x => Console.WriteLine(x.Value));
+                
                 IEnumerable<string> output = sPath.Select(x=> x.Value);
 
-                fileHandler.SaveOutputFile(startWord.Value + targetWord.Value + ".txt", output);
+                fileHandler.SaveOutputFile(resultfile, output);
 
-                Console.WriteLine($"Output file is {startWord.Value + targetWord.Value}.txt");
+                Console.WriteLine($"Output file is {resultfile}");
 
             }
             catch (Exception ex)

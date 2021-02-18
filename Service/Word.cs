@@ -30,20 +30,18 @@ namespace WordLadder.Service
 
         public bool IsSimilar(IWord word)
         {
-            int differences = 0;
+            int diff = 0;
             if (this.HasSameLength(word))
             {
                 for (int i = 0; i < this.Value.Length; i++)
                 {
                     if (this.Value[i] != word.Value[i])
                     {
-                        differences++;
+                        diff++;
                     }
                 }
-
             }
-
-            return differences == 1;
+            return diff == 1;
         }
 
         

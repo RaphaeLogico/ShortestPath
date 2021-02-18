@@ -10,12 +10,13 @@ namespace WordLadder.Data
     {
         public IEnumerable<string> WordList { get; set; }
 
-        private readonly string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");
+        public string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");
        
-        public IEnumerable<string> LoadDictionaryContent(int wordLenght)
+        public IEnumerable<string> LoadDictionaryContent(int wordLenght, string path = "")
         {
             try
-            {                
+            {
+                filePath = (string.IsNullOrEmpty(path) ? filePath : path);
                 WordList = File.ReadAllLines(filePath).Where(x => x.Length.Equals(wordLenght)).ToList();
 
                 return WordList;

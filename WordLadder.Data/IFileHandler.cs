@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace WordLadder.Data
 {
@@ -15,7 +13,8 @@ namespace WordLadder.Data
         /// Return a List of words generated before the calculation of shortest path between Start Word and End Word provided
         /// </summary>        
         /// <param name="wordLenght">Length of words to filter</param>        
-        public IEnumerable<string> LoadDictionaryContent(int wordLenght);        
+        /// <param name="path">Path to tests</param>        
+        public IEnumerable<string> LoadDictionaryContent(int wordLenght, string path = "");
 
         /// <summary>
         /// Save the shortest path in a file

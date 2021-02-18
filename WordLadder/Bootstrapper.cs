@@ -7,7 +7,6 @@ namespace WordLadder.App
     {
         internal static IUnityContainer Container { get; set; }
 
-
         public static void Initialize()
         {
             Container = BuildUnityContainer();
