@@ -6,7 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ninject.Web.Common" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Service\WordLadder.Service.csproj" />
+    <ProjectReference Include="..\WordLadder.DI\WordLadder.DI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="words-english.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

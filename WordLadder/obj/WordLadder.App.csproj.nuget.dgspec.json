@@ -128,6 +128,76 @@
         }
       }
     },
+    "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.DI\\WordLadder.DI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.DI\\WordLadder.DI.csproj",
+        "projectName": "WordLadder.DI",
+        "projectPath": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.DI\\WordLadder.DI.csproj",
+        "packagesPath": "C:\\Users\\C99997242\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.DI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\C99997242\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\Service\\WordLadder.Service.csproj": {
+                "projectPath": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\Service\\WordLadder.Service.csproj"
+              },
+              "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.Data\\WordLadder.Data.csproj": {
+                "projectPath": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.Data\\WordLadder.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder\\WordLadder.App.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -157,6 +227,9 @@
             "projectReferences": {
               "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\Service\\WordLadder.Service.csproj": {
                 "projectPath": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\Service\\WordLadder.Service.csproj"
+              },
+              "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.DI\\WordLadder.DI.csproj": {
+                "projectPath": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder.DI\\WordLadder.DI.csproj"
               }
             }
           }
@@ -170,6 +243,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Ninject.Web.Common": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

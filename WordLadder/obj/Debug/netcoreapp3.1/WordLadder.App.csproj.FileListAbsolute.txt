@@ -32,5 +32,11 @@ C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\ru
 C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\WordLadder.Data.dll
 C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\WordLadder.Data.pdb
-C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\WordLadder.Data.dll.config
 C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\WordLadder.App.dll.config
+C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\Unity.Abstractions.dll
+C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\Unity.Container.dll
+C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\WordLadder.DI.dll
+C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\Ninject.dll
+C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\Ninject.Web.Common.dll
+C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\WordLadder.DI.pdb
+C:\Users\C99997242\Source\Repos\WordLadder\WordLadder\bin\Debug\netcoreapp3.1\words-english.txt

@@ -12,7 +12,7 @@ namespace WordLadder.Service
         /// <param name="startWord">Start Word</param>
         /// <param name="targetWord">Target Word</param>      
         /// <returns></returns>
-        public IEnumerable<IWord> FindPath(IWord startWord, IWord targetWord);
+        public IEnumerable<IWord> FindPath(IWord startWord, IWord targetWord, List<Word> originalWords);
 
         /// <summary>
         /// Iterate through each step identifying the possibilities and separating the lists to be calculated

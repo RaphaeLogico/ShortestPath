@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace WordLadder.Data
 {
@@ -10,8 +11,8 @@ namespace WordLadder.Data
     {
         public IEnumerable<string> WordList { get; set; }
 
-        private readonly string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");        
-
+        private readonly string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");
+       
         public IEnumerable<string> LoadDictionaryContent(int wordLenght)
         {
             try

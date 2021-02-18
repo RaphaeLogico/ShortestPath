@@ -9,5 +9,4 @@ C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordL
 C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.pdb
 C:\Users\C99997242\Source\Repos\WordLadder\Service\bin\Debug\netcoreapp3.1\WordLadder.Data.dll
 C:\Users\C99997242\Source\Repos\WordLadder\Service\bin\Debug\netcoreapp3.1\WordLadder.Data.pdb
-C:\Users\C99997242\Source\Repos\WordLadder\Service\bin\Debug\netcoreapp3.1\WordLadder.Data.dll.config
 C:\Users\C99997242\Source\Repos\WordLadder\Service\obj\Debug\netcoreapp3.1\WordLadder.Service.csproj.CopyComplete
