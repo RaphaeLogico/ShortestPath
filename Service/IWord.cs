@@ -4,7 +4,7 @@ namespace WordLadder.Service
 {
     public interface IWord
     {
-        public string Text { get; }
+        public string Value { get; }
 
         /// <summary>
         /// Check if the Word contains only Letters
@@ -21,13 +21,12 @@ namespace WordLadder.Service
         /// Check Length about two words
         /// </summary>
         /// <param name="word">Word to compare</param>
-        public bool HasSameLength(Word word);
+        public bool HasSameLength(IWord word);
 
         /// <summary>
         /// Check if two words has only one different letter
         /// </summary>
-        /// <param name="first">First word</param>
-        /// <param name="second">Second Word</param>
-        public bool IsSimilar(IWord first, IWord second);
+        /// <param name="word">word to compare</param>        
+        public bool IsSimilar(IWord word);
     }
 }

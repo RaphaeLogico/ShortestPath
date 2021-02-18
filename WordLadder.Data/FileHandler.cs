@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 
@@ -7,19 +8,21 @@ namespace WordLadder.Data
 {
     public class FileHandler : IFileHandler
     {
-        public IEnumerable<string> WordSet { get; set; }
+        public IEnumerable<string> WordList { get; set; }
 
-        public IEnumerable<string> LoadDictionaryContent(string filePath)
+        private readonly string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");        
+
+        public IEnumerable<string> LoadDictionaryContent(int wordLenght)
         {
             try
-            {
-                WordSet = File.ReadAllLines(filePath).ToList();
+            {                
+                WordList = File.ReadAllLines(filePath).Where(x => x.Length.Equals(wordLenght)).ToList();
 
-                return WordSet;
+                return WordList;
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error reading the list of words from file path: {filePath}. Error message: {ex.Message}");                
+                throw new Exception($"Error reading the list of words from file path. Error message: {ex.Message}");                
             }
         }
 

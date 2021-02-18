@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "IXzcgWuMjI+Y34SdW+Ay0n0OmpLln9HFkhRazb9PTS+HloaEvgjn6/pWnL4Q08QxSjJWOQU4qH+kZsGh0FLc7g==",
+  "dgSpecHash": "Sz/cQUYjxyiBSgNWeQnEM6EguN58lF7svT161ep4Uc2pmDqHNnd74lQ20cMtn0tkg/hrRVAaz/+EPSn5SStOPg==",
   "success": true,
   "projectFilePath": "C:\\Users\\C99997242\\Source\\Repos\\WordLadder\\WordLadder\\WordLadder.App.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\C99997242\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\C99997242\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

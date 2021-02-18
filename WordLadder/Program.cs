@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
+using WordLadder.Data;
 using WordLadder.Service;
+
 
 namespace WordLadder.App
 {
-    class Program
+    public class Program
     {
+        public string filePath = ConfigurationManager.AppSettings.Get("InputFilePath");
+        
         static void Main(string[] args)
         {
-            _ = new Stopwatch();
-
-            //Variables
+            Stopwatch stopWatch = new Stopwatch();
+            
             Word startWord;
             Word targetWord;
-            int wordsLength = 0;
-            string dictionaryFile;
-            string resultFileName;
-            List<Word> result = new List<Word>();
-
-
 
             Console.WriteLine(string.Format("Enter start word: "));
             startWord = new Word(Console.ReadLine());
@@ -34,10 +32,18 @@ namespace WordLadder.App
                 Console.WriteLine("Both words need to have same lenght.");                
             }
 
-            
+            stopWatch.Start();
 
-
+            WordEngine engine = new WordEngine();
+            IEnumerable<IWord> sPath = engine.FindPath(startWord, targetWord);
             
+            foreach (var item in sPath)
+            {
+                Console.WriteLine(item.Value);
+            }
+            Console.WriteLine(sPath);
+
         }
+
     }
 }

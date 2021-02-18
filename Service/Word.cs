@@ -6,36 +6,36 @@ namespace WordLadder.Service
 {
     public class Word : IWord
     {
-        public string Text { get; private set; }
+        public string Value { get; private set; }
 
         public Word(string value)
         {
-            Text = value;
+            Value = value;
         }
 
         public bool IsValid()
         {
-            return Text.All(Char.IsLetter);
+            return Value.All(Char.IsLetter);
         }
 
         public bool IsOnList(IEnumerable<IWord> wordsList)
         {
-            return wordsList.Any(x => x.Text.ToLower().Equals(this.Text.ToLower()));
+            return wordsList.Any(x => x.Value.ToLower().Equals(this.Value.ToLower()));
         }
 
-        public bool HasSameLength(Word word)
+        public bool HasSameLength(IWord word)
         {
-            return this.Text.Length == word.Text.Length;
+            return this.Value.Length == word.Value.Length;
         }
 
-        public bool IsSimilar(IWord first, IWord second)
+        public bool IsSimilar(IWord word)
         {
             int differences = 0;
-            if (first.Text.Length == second.Text.Length)
+            if (this.HasSameLength(word))
             {
-                for (int i = 0; i < first.Text.Length; i++)
+                for (int i = 0; i < this.Value.Length; i++)
                 {
-                    if (first.Text[i] != second.Text[i])
+                    if (this.Value[i] != word.Value[i])
                     {
                         differences++;
                     }
