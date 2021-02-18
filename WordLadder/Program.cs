@@ -62,6 +62,8 @@ namespace WordLadder.App
                 fileHandler.SaveOutputFile(resultfile, output);
 
                 Console.WriteLine($"Output file is {resultfile}");
+                Console.WriteLine("Press some key to exit");
+                Console.ReadLine();
 
             }
             catch (Exception ex)
