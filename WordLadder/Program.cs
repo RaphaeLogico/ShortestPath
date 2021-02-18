@@ -29,6 +29,7 @@ namespace WordLadder.App
                 Word startWord;
                 Word targetWord;
                 int wordsLength;
+                
 
                 Console.WriteLine(string.Format("Enter start word: "));
                 startWord = new Word(Console.ReadLine());
@@ -65,63 +66,17 @@ namespace WordLadder.App
                 {
                     Console.WriteLine(item.Value);
                 }
+                IEnumerable<string> output = sPath.Select(x=> x.Value);
+
+                fileHandler.SaveOutputFile(startWord.Value + targetWord.Value + ".txt", output);
+
+                Console.WriteLine($"Output file is {startWord.Value + targetWord.Value}.txt");
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
-            //static IEnumerable<Word> ExecuteCalculationProcess(Word startWord, Word targetWord, int wordsLength, string dictionaryFile, string resultFileName)
-            //{
-            //    List<Word> wordsList = new List<Word>();
-            //    List<Word> result = new List<Word>();
-
-            //    if (fileHandler.FileExists(dictionaryFile))
-            //    {
-            //        //Console.WriteLine(Environment.NewLine);
-            //        //Console.WriteLine("Loading Words Dictionary File...");
-            //        //// Load the Word List
-            //        //wordsList = fileHandler.LoadDictionaryContent(wordsLength).ToList()
-            //        //    .Select(x => new Word(x.ToLower()))
-            //        //    .Where(y => y.IsValid())
-            //        //    .Where(z => z.Value.Length(wordsLength)).ToList();
-
-            //        //Console.WriteLine(Environment.NewLine);
-            //        //Console.WriteLine("Loaded " + fileLoader.wordSet.Count() + " words");
-
-            //        Console.WriteLine(Environment.NewLine);
-            //        Console.WriteLine("Calculating Shortest Path...");
-
-            //        // Calculate the Shortest Path from Start Word up to End Word
-            //        var calculator = wordEngine.FindPath(startWord, targetWord);
-
-            //        Console.WriteLine("Shortest Path Calculated Successfully.");
-
-            //        Console.WriteLine(Environment.NewLine);
-            //        Console.WriteLine("Saving Results to Output File...");
-
-            //        if (!string.IsNullOrWhiteSpace(resultFileName))
-            //        {
-            //            // Save the Result to a file
-            //            fileHadler.SaveResultFile(resultFileName, calculator);
-            //            Console.WriteLine("Results Saved Successfully.");
-
-            //            Console.WriteLine(Environment.NewLine);
-            //            Console.WriteLine("Loading Results from Output File...");
-            //            // It was not asked to be done but i added it anyway to show the results on screen
-            //            result = fileLoader.LoadResultsDictionary(resultFileName).Select(x => new Word(x.ToLower())).ToList();
-            //        }
-            //        else
-            //            Console.WriteLine(ValidationMessages.AnswerFileNameNotInformed);
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine(string.Format(ValidationMessages.FileDoesNotExists, dictionaryFile));
-            //    }
-
-            //    return result;
-            //}
         }
 
     }
