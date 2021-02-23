@@ -1,0 +1,6 @@
+loop
+loot
+lost
+cost
+cast
+case

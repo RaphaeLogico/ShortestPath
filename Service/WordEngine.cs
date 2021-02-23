@@ -44,7 +44,6 @@ namespace WordLadder.Service
             List<List<IWord>> allWordPathCopy = new List<List<IWord>>(allWordPaths.Select(x => x)).ToList();
             stopWhile = false;
             int i = 0;
-            bool isNotCompleted = false;
             bool isCompleted = false;
 
             try
@@ -80,8 +79,6 @@ namespace WordLadder.Service
                     intermediateWords = wordSteps;
                 });
                 
-                if (isNotCompleted)
-                    stopWhile = isNotCompleted;
             }
             catch (Exception ex)
             {
